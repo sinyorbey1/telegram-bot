@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: telegram-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: API_ID
+        value: 39978792
+      - key: API_HASH
+        value: 4e1fdbca6802ec308cddff07ed8a7c14
+      - key: SOURCE_CHAT_ID
+        value: -1002214186195
+      - key: DEST_CHAT_ID
+        value: -1003729562192
+      - key: SESSION_STRING
+        sync: false
